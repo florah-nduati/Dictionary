@@ -1,6 +1,6 @@
 import React from "react";
 import Search from '../../Components/Search/search';
-import Results from "../../Components/Results/results";
+import Results from "../../Components/Results/Results";
 import "./Home.css";
 
 function Home() {
