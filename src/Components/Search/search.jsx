@@ -4,7 +4,6 @@ import "./Search.css";
 
 function Search() {
   const changeWord = useWordParamStore((state) => state.setWord);
-
   const [wordParam, setWordParam] = useState("");
 
   const handleSearch = (e) => {
@@ -14,22 +13,22 @@ function Search() {
 
   return (
     <div className="search">
-      <h2>my dictionary: made by Florah nduati</h2>
+      <h2>My Dictionary: Made by Florah Nduati</h2>
       <div className="form-group">
         <label htmlFor="word" className="form-group-label">
-          <input
-            type="text"
-            className="input"
-            placeholder="search any word"
-            value={wordParam}
-            onChange={(e) => setWordParam(e.target.value)}
-          />
+          Search for a word:
         </label>
-        <label htmlFor="Search" className="form-group-label">
-          <button className="button" onClick={handleSearch}>
-            Search
-          </button>
-        </label>
+        <input
+          type="text"
+          id="word" 
+          className="input"
+          placeholder="Search any word"
+          value={wordParam}
+          onChange={(e) => setWordParam(e.target.value)}
+        />
+        <button className="button" onClick={handleSearch}>
+          Search
+        </button>
       </div>
     </div>
   );
