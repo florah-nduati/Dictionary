@@ -18,4 +18,3 @@ const wordParamStore = function (set) {
 const useWordParamStore = create(wordParamStore);
 
 export default useWordParamStore;
-

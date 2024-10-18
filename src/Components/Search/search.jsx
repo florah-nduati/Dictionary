@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useWordParamStore from "../stores/WordParam";
-import './Search.css'; 
+import useWordParamStore from "../Stores/WordParam";
+import "./Search.css";
 
 function Search() {
   const changeWord = useWordParamStore((state) => state.setWord);
@@ -26,7 +26,9 @@ function Search() {
           />
         </label>
         <label htmlFor="Search" className="form-group-label">
-          <button className="button" onClick={handleSearch}>Search</button>
+          <button className="button" onClick={handleSearch}>
+            Search
+          </button>
         </label>
       </div>
     </div>

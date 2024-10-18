@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
-import useWordParamStore from "../stores/WordParam";
-import './Results.css'; 
+import useWordParamStore from "../Stores/WordParam";
+import "./Results.css";
 
 function Results() {
   const word = useWordParamStore((state) => state.word);
@@ -10,14 +10,14 @@ function Results() {
     ["word", word],
     async () => {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`,
       );
       const results = await response.json();
       return results;
     },
     {
       enabled: !!word,
-    }
+    },
   );
 
   return (

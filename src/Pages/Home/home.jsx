@@ -1,7 +1,7 @@
 import React from "react";
-import Search from "../../components/Search/Search";
+import Search from "../../Components/Search/Search";
 import Results from "../../Components/Results/Results";
-import './Home.css'; 
+import "./Home.css";
 
 function Home() {
   return (
